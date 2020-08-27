@@ -37,7 +37,7 @@ class ChannelViewController: UIViewController {
         super.viewDidLoad()
         remoteTextView.isUserInteractionEnabled = false
 
-        // engine.setAudioProfile(.musicStandardStereo, scenario: .chatRoomGaming) // @cavansu: uncomment this line and every thing sounds bad.
+        engine.setAudioProfile(.musicStandard, scenario: .chatRoomGaming)
         engine.joinChannel(byToken: nil, channelId: channel, info: nil, uid: 0, joinSuccess: nil)
         
         MediaWorker.setDelegate(self)

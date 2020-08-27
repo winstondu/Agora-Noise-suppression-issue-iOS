@@ -1,6 +1,8 @@
 # Speech Recognizer Modification
 
-This app demonstrates a particular bug that seems to occur when an audio profile is set, causing any recorded audio frames received from IAudioFrameObserver to be distorted.
+This app demonstrates a particular bug that is new on Agora 3.0 and versions above.
+
+**The bug**: Noise suppression from the chatRoomGaming profile only seems to apply if there is another participant in the agora channel
 
 With this modified sample app, you can:
 
@@ -9,26 +11,28 @@ With this modified sample app, you can:
 - Toggle a temporary recording of your voice.
 
 ## Bug replication Steps
-1. First, setup and run this project under all the instructions in the all the original sections below
-2. Run 1 (without set profile)  
-    1. Join a channel using the English Locale.
+1. First, make sure you have two iPhones. Setup and run this project on both phones.
+2. Run 1 (only participant in Agora channel) [Demo](./ExampleRunThroughVideos/OnlyParticipant.MP4)
+    1. Join a channel using the English Locale on Device 1.
     2. Tap the "Toggle Recording Button"
-    3. Say "Testing, Testing, Testing" a few times over.
+    3. Repeat the following 3-4 times:  
+           *- Say "Testing, Testing, Testing", then make a loud tapping sound (the sound of your fingers on a wooden or plastic surface)
     4. Tap the "Toggle Recording Button" again.
     5. The iOS Activity Sheet now pops up. Hit "Save Video" to save the video to your iOS camera roll (aka Photo album).
-    6. Now go to your iOS Photos, and find the video you just saved. Play the video. You should hear a clear recording of your own voice.
-3. Run 2 (with setProfile)   
-    1. In the code, uncomment line #40 of `channelviewcontroller.swift`:
-        ```
-        engine.setAudioProfile(.musicStandardStereo, scenario: .chatRoomGaming)
-        ```
-    2. Now run the code, and repeat all the steps of the previous run.
-    3. In this case, the recording of your voice will be EXTREMELY distorted.
-
+    6. Now go to your iOS Photos, and find the video you just saved. Play the video. You should hear a recording containing the taps.
+3. Run 2 (with another participant in the Agora channel) [Demo](./ExampleRunThroughVideos/MultipleParticipant.MP4)
+    1. Join a channel using the English Locale on Device 1.
+    2. Join the same channel using English Locale on Device 2. Make sure Device 2 is in a separate room from Device 1.
+    3. Tap the "Toggle Recording Button" on Device 1.
+    3. Repeat the following 3-4 times:  
+           *- Say "Testing, Testing, Testing", then make a loud tapping sound (the sound of your fingers on a wooden or plastic surface)
+    4. Tap the "Toggle Recording Button" on Device 1 again.
+    5. The iOS Activity Sheet now pops up. Hit "Save Video" to save the video to your iOS camera roll (aka Photo album).
+    6. Now go to your iOS Photos, and find the video you just saved. Play the video. You should hear a recording that largely filters out the taps.
 
 
 ## Prerequisites
-- Xcode 10.0+
+- Xcode 12.0+
 - Physical iOS device (iPhone or iPad)
 - iOS simulator is NOT supported
 

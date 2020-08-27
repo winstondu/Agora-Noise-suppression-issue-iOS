@@ -47,6 +47,8 @@
 		38AD967122D2E77C0086A0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38AD967322D2E77C0086A0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DDBF5D22D316A100CFB4F5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		481EFD6424F87DBB00C858EB /* OnlyParticipant.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OnlyParticipant.MP4; sourceTree = "<group>"; };
+		481EFD6524F87DBB00C858EB /* MultipleParticipant.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MultipleParticipant.MP4; sourceTree = "<group>"; };
 		760C8CCCAEC4881C816AC93D /* libPods-SpeechRecognizer-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeechRecognizer-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A773BD2E2408DC41003ECBFD /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A773BD302408DC4F003ECBFD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				38DDBF5D22D316A100CFB4F5 /* README.md */,
+				481EFD6324F87D5B00C858EB /* ExampleRunThroughVideos */,
 				38AD966422D2E7780086A0BC /* SpeechRecognizer-iOS */,
 				38AD966322D2E7780086A0BC /* Products */,
 				FE3767D40B8E8E5EB2C13488 /* Frameworks */,
@@ -103,6 +106,15 @@
 				A79A7EA323B4817800335021 /* AgoraRtcKit.framework */,
 			);
 			path = "SpeechRecognizer-iOS";
+			sourceTree = "<group>";
+		};
+		481EFD6324F87D5B00C858EB /* ExampleRunThroughVideos */ = {
+			isa = PBXGroup;
+			children = (
+				481EFD6524F87DBB00C858EB /* MultipleParticipant.MP4 */,
+				481EFD6424F87DBB00C858EB /* OnlyParticipant.MP4 */,
+			);
+			path = ExampleRunThroughVideos;
 			sourceTree = "<group>";
 		};
 		A79A7EA523B4818100335021 /* Supporting Files */ = {

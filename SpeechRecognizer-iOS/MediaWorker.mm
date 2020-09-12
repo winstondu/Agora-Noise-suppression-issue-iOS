@@ -28,7 +28,7 @@ public:
                                                                   interleaved:interleaved
                                                                 channelLayout:chLayout];
         
-        size_t size = audioFrame.bytesPerSample * audioFrame.samples;
+        size_t size = audioFrame.bytesPerSample * audioFrame.samples * audioFrame.channels;
         
         AVAudioPCMBuffer *thePCMBuffer = [[AVAudioPCMBuffer alloc] initWithPCMFormat:chFormat frameCapacity:(uint32_t)size];
         

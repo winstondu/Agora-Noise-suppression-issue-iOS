@@ -1,6 +1,6 @@
 # Speech Recognizer Modification
 
-This app demonstrates a particular bug that is new on Agora 3.0 and versions above.
+This app demonstrates a particular bug that is new on Agora 3.0 and versions above. It is based off of https://github.com/AgoraIO/Advanced-Audio/tree/master/iOS&macOS/SpeechRecognizer-iOS
 
 **The bug**: Noise suppression from the chatRoomGaming profile only seems to apply if there is another participant in the agora channel
 
